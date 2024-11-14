@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Database</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Movie Database</h1>
+</div>
+
+<script>
+    let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+
+    let personalMovieDB = {
+        count: numberOfFilms,
+        movies: {}
+    };
+
+    for (let i = 0; i < 2; i++) {
+        let movieName = prompt('Напишите название одного из последних просмотренных фильмов?');
+        let movieRating = prompt('Ваша оценочка фильму?');
+
+        if (movieName != null && movieRating != null && movieName !== '' && movieRating !== '' && movieName.length < 50 && !isNaN(movieRating) && movieRating >= 0 && movieRating <= 10) {
+            personalMovieDB.movies[movieName] = movieRating;
+        } else {
+            alert('Пожалуйста, введите корректные данные.');
+            i--;
+        }
+    }
+
+    console.log(personalMovieDB);
+</script>
+</body>
+</html>
