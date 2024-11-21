@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини графический редактор на SVG</title>
+    <style>
+        #svgCanvas {
+            border: 1px solid royalblue;
+            width: 1500px;
+            height: 680px;
+        }
+        .controls {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="controls">
+    <label><input type="radio" name="shape" value="circle" checked> Круг</label>
+    <label><input type="radio" name="shape" value="rectangle"> Прямоугольник</label>
+</div>
+
+<svg id="svgCanvas"></svg>
+
+<script>
+    const svgCanvas = document.getElementById('svgCanvas');
+    let selectedShape = 'circle';
+    let isDrawing = false;
+    let startX, startY, currentShape;
+
+    // Обработчик выбора фигуры
+    document.querySelectorAll('input[name="shape"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            selectedShape = e.target.value;
+        });
+    });
+
+    // Начало рисования при нажатии ЛКМ
+    svgCanvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        startX = e.offsetX;
+        startY = e.offsetY;
+
+        if (selectedShape === 'circle') {
+            currentShape = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            currentShape.setAttribute('cx', startX);
+            currentShape.setAttribute('cy', startY);
+            currentShape.setAttribute('r', 0);
+        } else if (selectedShape === 'rectangle') {
+            currentShape = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+            currentShape.setAttribute('x', startX);
+            currentShape.setAttribute('y', startY);
+            currentShape.setAttribute('width', 0);
+            currentShape.setAttribute('height', 0);
+        }
+
+        currentShape.setAttribute('stroke', 'red');
+        currentShape.setAttribute('fill', 'transparent');
+        svgCanvas.appendChild(currentShape);
+    });
+
+    // Обновление размеров фигуры при движении мыши
+    svgCanvas.addEventListener('mousemove', (e) => {
+        if (!isDrawing) return;
+
+        if (selectedShape === 'circle') {
+            const radius = Math.sqrt(Math.pow(e.offsetX - startX, 2) + Math.pow(e.offsetY - startY, 2));
+            currentShape.setAttribute('r', radius);
+        } else if (selectedShape === 'rectangle') {
+            const width = e.offsetX - startX;
+            const height = e.offsetY - startY;
+            currentShape.setAttribute('width', Math.abs(width));
+            currentShape.setAttribute('height', Math.abs(height));
+
+            // Определение позиции верхнего левого угла
+            currentShape.setAttribute('x', width < 0 ? e.offsetX : startX);
+            currentShape.setAttribute('y', height < 0 ? e.offsetY : startY);
+        }
+    });
+
+    // Завершение рисования при отпускании ЛКМ
+    svgCanvas.addEventListener('mouseup', () => {
+        isDrawing = false;
+    });
+</script>
+
+</body>
+</html>

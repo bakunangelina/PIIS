@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Graphic Editor</title>
+    <style>
+        #canvas {
+            border: 1px solid royalblue;
+            cursor: crosshair;
+            margin-top: 10px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="controls">
+    <label><input type="radio" name="shape" value="circle" checked> Круг</label>
+    <label><input type="radio" name="shape" value="rectangle"> Прямоугольник</label>
+</div>
+
+<canvas id="canvas" width="1500" height="680"></canvas>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    let selectedShape = 'circle';
+    let isDrawing = false;
+    let startX, startY;
+
+    // Хранение нарисованных фигур
+    const shapes = [];
+
+    document.querySelectorAll('input[name="shape"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            selectedShape = e.target.value;
+        });
+    });
+
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        startX = e.offsetX;
+        startY = e.offsetY;
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDrawing) return;
+
+        const currentX = e.offsetX;
+        const currentY = e.offsetY;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        redrawShapes();
+
+        if (selectedShape === 'circle') {
+            const radius = Math.sqrt(Math.pow(currentX - startX, 2) + Math.pow(currentY - startY, 2));
+            drawCircle(startX, startY, radius);
+        } else if (selectedShape === 'rectangle') {
+            const width = currentX - startX;
+            const height = currentY - startY;
+            drawRectangle(startX, startY, width, height);
+        }
+    });
+
+    canvas.addEventListener('mouseup', (e) => {
+        isDrawing = false;
+        const endX = e.offsetX;
+        const endY = e.offsetY;
+
+        if (selectedShape === 'circle') {
+            const radius = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+            shapes.push({ type: 'circle', x: startX, y: startY, radius: radius, color: 'yellow' });
+        } else if (selectedShape === 'rectangle') {
+            const width = endX - startX;
+            const height = endY - startY;
+            shapes.push({ type: 'rectangle', x: startX, y: startY, width: width, height: height, color: 'brown' });
+        }
+
+        redrawShapes();
+    });
+
+    function redrawShapes() {
+        shapes.forEach(shape => {
+            if (shape.type === 'circle') {
+                drawCircle(shape.x, shape.y, shape.radius, shape.color);
+            } else if (shape.type === 'rectangle') {
+                drawRectangle(shape.x, shape.y, shape.width, shape.height, shape.color);
+            }
+        });
+    }
+
+    function drawCircle(x, y, radius, color = 'yellow') {
+        ctx.beginPath(); // Изоляция новыой фигуры, канвас тупит
+        ctx.arc(x, y, radius, 0, Math.PI * 2); // метод для рисования круга
+        ctx.strokeStyle = color;
+        ctx.stroke(); // обновляет линию окружности
+    }
+
+    function drawRectangle(x, y, width, height, color = 'brown') {
+        ctx.beginPath();
+        ctx.rect(
+            width < 0 ? x + width : x,
+            height < 0 ? y + height : y,
+            Math.abs(width),
+            Math.abs(height)
+        );
+        ctx.strokeStyle = color;
+        ctx.stroke();
+    }
+</script>
+
+</body>
+</html>
