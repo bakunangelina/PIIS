@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Film1Font';
+    src: url('../fonts/ofont.ru_Unutterable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Film2Font';
+    src: url('../fonts/ofont.ru_Echoes Slab.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Film3Font';
+    src: url('../fonts/ofont.ru_1 Shelley Volante.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c9e6b6; /* Цвет фона */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px; /* Максимальная ширина */
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+.movie-links {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.movie-links a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+.movie {
+    border-bottom: 1px solid #2c2b2b;
+    padding: 20px 0;
+}
+
+.movie h2 {
+    color: #444;
+}
+
+.film-info {
+    display: flex;
+    justify-content: center; /* Центрирование контейнера с изображениями */
+    gap: 10px; /* Отступ между изображениями */
+}
+
+.film-info img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover; /* Сохраняет пропорции при изменении размера */
+    border-radius: 20px; /* Закругленные края */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+table, th, td {
+    border: 1px solid #0a005e; /* Цвет границ таблицы */
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #ac5353; /* Цвет фона заголовков таблицы */
+}
+
+#film1 {
+    font-family: 'Film1Font', Arial, sans-serif;
+}
+
+#film2 {
+    font-family: 'Film2Font', Arial, sans-serif;
+}
+
+#film3 {
+    font-family: 'Film3Font', Arial, sans-serif;
+}
+
+#film1 p {
+    text-align: left;
+}
+
+#film2 p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#film3 p {
+    text-align: right;
+}
