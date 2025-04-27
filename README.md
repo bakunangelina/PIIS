@@ -1,7 +1,7 @@
 # CV
 ## Личная информация
 
-|![](https://github.com/bakunangelina/piis/blob/main/Я%201.jpg)|◦ ФИО: Бакун Ангелина Андреевна <br> ◦ Дата рождения: 27.11.2004 <br> ◦ Группа: 210901 <br> ◦ GitHub: [bakunangelina](https://bakunangelina.github.io/PIIS/ "Перейти по ссылке") <br> ◦ Gmail: bakunangelina78@gmail.com <br> ◦ Deploy: [bakunangelina.github.io/piis/](https://bakunangelina.github.io/ "Перейти по ссылке")|
+|![](https://github.com/bakunangelina/piis/blob/main/Я%20.jpg)|◦ ФИО: Бакун Ангелина Андреевна <br> ◦ Дата рождения: 27.11.2004 <br> ◦ Группа: 210901 <br> ◦ GitHub: [bakunangelina](https://bakunangelina.github.io/PIIS/ "Перейти по ссылке") <br> ◦ Gmail: bakunangelina78@gmail.com <br> ◦ Deploy: [bakunangelina.github.io/piis/](https://bakunangelina.github.io/ "Перейти по ссылке")|
 |:---|:---|
 
 ## О себе
