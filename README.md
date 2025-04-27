@@ -31,7 +31,7 @@
 + Гибкость мышления
 
  ## Пример кода
- ``````python
+ ```python
 def bubble_sort(arr):
     n = len(arr)
     
