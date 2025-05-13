@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetCake - Заказать</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-theme">
+<header class="main-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="SweetCake Логотип" class="logo-img">
+          <h1 class="logo-text">Sweet<span>Cake</span></h1>
+        </a>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+          <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
+          <li class="nav-item"><a href="order.html" class="nav-link">Заказать</a></li>
+          <li class="nav-item"><a href="reviews.html" class="nav-link">Отзывы</a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Переключить тему" title="Сменить тему">
+          <i class="fas fa-moon theme-icon"></i>
+        </button>
+        <button class="burger-menu" aria-label="Меню" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main-content">
+  <section class="order-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Создайте свой уникальный десерт</h2>
+        <p class="section-subtitle">Заполните форму, чтобы оформить индивидуальный заказ</p>
+      </div>
+
+      <div class="order-steps">
+        <div class="step-indicator active" data-step="1">
+          <span class="step-number">1</span>
+          <span class="step-label">Выбор изделия</span>
+        </div>
+        <div class="step-indicator" data-step="2">
+          <span class="step-number">2</span>
+          <span class="step-label">Начинка и декор</span>
+        </div>
+        <div class="step-indicator" data-step="3">
+          <span class="step-number">3</span>
+          <span class="step-label">Контактные данные</span>
+        </div>
+      </div>
+
+      <form id="custom-order-form" class="order-form">
+        <div class="form-step active" data-step="1">
+          <h3 class="form-step-title">Выберите тип и параметры изделия</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="product-type" class="form-label">Тип изделия *</label>
+              <select id="product-type" class="form-select" required>
+                <option value="" disabled selected>Выберите тип</option>
+                <option value="cake">Торт</option>
+                <option value="cupcake">Капкейки</option>
+                <option value="pastry">Пирожное</option>
+                <option value="cookies">Печенье</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="product-size" class="form-label">Размер *</label>
+              <select id="product-size" class="form-select" required>
+                <option value="" disabled selected>Выберите размер</option>
+                <option value="small">Маленький (до 1 кг)</option>
+                <option value="medium">Средний (1-2 кг)</option>
+                <option value="large">Большой (от 2 кг)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Форма изделия *</label>
+            <div class="shape-options">
+              <label class="shape-option">
+                <input type="radio" name="shape" value="square" required>
+                <span class="shape-preview square">
+                  <span>Круглая</span>
+                </span>
+              </label>
+
+              <label class="shape-option">
+                <input type="radio" name="shape" value="square">
+                <span class="shape-preview square">
+                  <span>Квадратная</span>
+                </span>
+              </label>
+
+              <label class="shape-option">
+                <input type="radio" name="shape" value="square">
+                <span class="shape-preview square">
+                  <span>Сердце</span>
+                </span>
+              </label>
+
+              <label class="shape-option">
+                <input type="radio" name="shape" value="square">
+                <span class="shape-preview square">
+                  <span>Другая</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline btn-next-step">Далее</button>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="2">
+          <h3 class="form-step-title">Выберите начинку и оформление</h3>
+
+          <div class="form-group">
+            <label class="form-label">Основная начинка *</label>
+            <div class="filling-options">
+              <label class="filling-option">
+                <input type="radio" name="main-filling" value="chocolate" required>
+                <span class="filling-preview chocolate">
+                  <span>Шоколадная</span>
+                </span>
+              </label>
+
+              <label class="filling-option">
+                <input type="radio" name="main-filling" value="fruit">
+                <span class="filling-preview fruit">
+                  <span>Фруктовая</span>
+                </span>
+              </label>
+
+              <label class="filling-option">
+                <input type="radio" name="main-filling" value="cream">
+                <span class="filling-preview cream">
+                  <span>Сливочная</span>
+                </span>
+              </label>
+
+              <label class="filling-option">
+                <input type="radio" name="main-filling" value="caramel">
+                <span class="filling-preview caramel">
+                  <span>Карамельная</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Дополнительные начинки</label>
+            <div class="checkbox-options">
+              <label class="checkbox-option">
+                <input type="checkbox" name="extra-filling" value="nuts">
+                <span class="checkmark"></span>
+                <span class="option-label">Орехи (+5 руб.)</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="extra-filling" value="berries">
+                <span class="checkmark"></span>
+                <span class="option-label">Ягоды (+7 руб.)</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="extra-filling" value="jam">
+                <span class="checkmark"></span>
+                <span class="option-label">Джем (+4 руб.)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Декор</label>
+            <div class="checkbox-options">
+              <label class="checkbox-option">
+                <input type="checkbox" name="decor" value="flowers">
+                <span class="checkmark"></span>
+                <span class="option-label">Цветы (+10 руб.)</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="decor" value="figures">
+                <span class="checkmark"></span>
+                <span class="option-label">Фигурки (+15 руб.)</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="decor" value="text">
+                <span class="checkmark"></span>
+                <span class="option-label">Надпись (+5 руб.)</span>
+              </label>
+
+              <label class="checkbox-option">
+                <input type="checkbox" name="decor" value="drawing">
+                <span class="checkmark"></span>
+                <span class="option-label">Рисунок (+20 руб.)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="special-requests" class="form-label">Особые пожелания</label>
+            <textarea id="special-requests" class="form-textarea" rows="4" placeholder="Опишите ваши пожелания по дизайну, аллергии на продукты и т.д."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline btn-prev-step">Назад</button>
+            <button type="button" class="btn btn-primary btn-next-step">Далее</button>
+          </div>
+        </div>
+
+        <div class="form-step" data-step="3">
+          <h3 class="form-step-title">Ваши контактные данные</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customer-name" class="form-label">Ваше имя *</label>
+              <input type="text" id="customer-name" class="form-input" placeholder="Иванова Анна" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customer-phone" class="form-label">Телефон *</label>
+              <input type="tel" id="customer-phone" class="form-input" placeholder="+375 (29) 123-45-67" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-email" class="form-label">Email</label>
+            <input type="email" id="customer-email" class="form-input" placeholder="your@email.com">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="delivery-date" class="form-label">Дата доставки *</label>
+              <input type="date" id="delivery-date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label for="delivery-time" class="form-label">Время доставки</label>
+              <select id="delivery-time" class="form-select">
+                <option value="" selected>Не важно</option>
+                <option value="morning">Утро (9:00-12:00)</option>
+                <option value="afternoon">День (12:00-17:00)</option>
+                <option value="evening">Вечер (17:00-21:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="delivery-address" class="form-label">Адрес доставки</label>
+            <input type="text" id="delivery-address" class="form-input" placeholder="ул. Кондитерская, 15, кв. 42">
+          </div>
+
+          <div class="order-summary">
+            <h4 class="summary-title">Ваш заказ</h4>
+            <div class="summary-content">
+              <div class="summary-item">
+                <span class="summary-label">Торт "Ягодное наслаждение"</span>
+                <span class="summary-value">85 руб.</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Дополнительные ягоды</span>
+                <span class="summary-value">+7 руб.</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Цветочный декор</span>
+                <span class="summary-value">+10 руб.</span>
+              </div>
+              <div class="summary-item total">
+                <span class="summary-label">Итого:</span>
+                <span class="summary-value">102 руб.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline btn-prev-step">Назад</button>
+            <button type="submit" class="btn btn-primary btn-submit">Отправить заказ</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.jpg" alt="SweetCake Логотип" class="footer-logo-img">
+        <h2 class="footer-logo-text">Sweet<span>Cake</span></h2>
+      </div>
+
+      <div class="footer-links">
+        <div class="links-group">
+          <h3 class="links-title">Меню</h3>
+          <ul class="links-list">
+            <li><a href="index.html" class="footer-link">Главная</a></li>
+            <li><a href="catalog.html" class="footer-link">Каталог</a></li>
+            <li><a href="order.html" class="footer-link">Заказать</a></li>
+            <li><a href="reviews.html" class="footer-link">Отзывы</a></li>
+            <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="links-group">
+          <h3 class="links-title">Контакты</h3>
+          <ul class="links-list">
+            <li><a href="tel:+375291234567" class="footer-link">+375 (29) 836-02-44</a></li>
+            <li><a href="mailto:info@sweetcake.by" class="footer-link">info@sweetcake.by</a></li>
+            <li><a href="https://maps.google.com/?q=Минск, ул. Кондитерская, 15" target="_blank" class="footer-link">г. Минск, ул. Кондитерская, 15</a></li>
+          </ul>
+        </div>
+      </div> <!-- Закрывающий тег для footer-links -->
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 SweetCake. Все права защищены.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="VK"><i class="fab fa-vk"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/order.js"></script>
+</body>
+</html>

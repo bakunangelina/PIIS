@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetCake - Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .catalog-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .category-section {
+      margin-bottom: 50px;
+    }
+
+    .category-title {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+    }
+  </style>
+</head>
+<body class="light-theme">
+<header class="main-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="SweetCake Логотип" class="logo-img">
+          <h1 class="logo-text">Sweet<span>Cake</span></h1>
+        </a>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+          <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
+          <li class="nav-item"><a href="order.html" class="nav-link">Заказать</a></li>
+          <li class="nav-item"><a href="reviews.html" class="nav-link">Отзывы</a></li>
+          <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Переключить тему" title="Сменить тему">
+          <i class="fas fa-moon theme-icon"></i>
+        </button>
+        <button class="burger-menu" aria-label="Меню" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </div></header>
+
+<main class="main-content">
+  <section class="catalog-section">
+    <div class="container">
+      <div class="catalog-header">
+       <h2>Кондитерский каталог</h2>
+        <p class="subtitle">Более 50 видов свежих десертов ручной работы</p>
+      </div>
+
+      <!-- Раздел тортов -->
+      <div class="category-section">
+        <h2 class="category-title"> Торты
+        </h2>
+        <div class="product-grid">
+          <!-- Торт 1 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cake1.jpg" alt="Торт Ягодное наслаждение">
+            </div>
+            <div class="product-info">
+              <h3>Торт "Ягодное наслаждение"</h3>
+              <div class="product-meta">
+                <span class="price">85 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(24)</span>
+                </div>
+              </div>
+              <p>Бисквит с клубничным кремом и свежими ягодами</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Торт 2 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cake2.jpg" alt="Торт Шоколадный рай">
+            </div>
+            <div class="product-info">
+              <h3>Торт "Шоколадный рай"</h3>
+              <div class="product-meta">
+                <span class="price">95 руб.</span>
+                <div class="rating">
+                  ★★★★★ <span class="count">(32)</span>
+                </div>
+              </div>
+              <p>Шоколадные коржи с ореховой начинкой и карамелью</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Торт 3 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cake3.jpg" alt="Торт Медовик">
+            </div>
+            <div class="product-info">
+              <h3>Торт "Медовик"</h3>
+              <div class="product-meta">
+                <span class="price">75 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(18)</span>
+                </div>
+              </div>
+              <p>Классический медовый торт со сметанным кремом</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Раздел капкейков -->
+      <div class="category-section">
+        <h2 class="category-title">Капкейки
+        </h2>
+        <div class="product-grid">
+          <!-- Капкейки 1 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cupcake1.jpg" alt="Капкейки шоколадные">
+            </div>
+            <div class="product-info">
+              <h3>Капкейки "Шоколадные" (6 шт.)</h3>
+              <div class="product-meta">
+                <span class="price">45 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(18)</span>
+                </div>
+              </div>
+              <p>Шоколадные капкейки с воздушным кремом</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Капкейки 2 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cupcake2.jpg" alt="Капкейки ванильные">
+            </div>
+            <div class="product-info">
+              <h3>Капкейки "Ванильные" (6 шт.)</h3>
+              <div class="product-meta">
+                <span class="price">40 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(15)</span>
+                </div>
+              </div>
+              <p>Нежные ванильные капкейки с цветочным декором</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Раздел пирожных -->
+      <div class="category-section">
+        <h2 class="category-title">Пирожные
+        </h2>
+        <div class="product-grid">
+          <!-- Пирожное 1 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-pastry1.jpg" alt="Пирожное Малиновый рай">
+            </div>
+            <div class="product-info">
+              <h3>Пирожное "Малиновый рай"</h3>
+              <div class="product-meta">
+                <span class="price">35 руб.</span>
+                <div class="rating">
+                  ★★★★★ <span class="count">(32)</span>
+                </div>
+              </div>
+              <p>Нежное пироженое с кислой ноткой и свежей малиной</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Пирожное 2 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-pastry2.jpg" alt="Пирожное Кофейное наслаждение">
+            </div>
+            <div class="product-info">
+              <h3>Пирожное "Кофейное наслаждение"</h3>
+              <div class="product-meta">
+                <span class="price">38 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(25)</span>
+                </div>
+              </div>
+              <p>Кофейные коржи с нежным шоколадным муссом</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Пирожное 3 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cookie1.jpg" alt="Печенье Ореховое">
+            </div>
+            <div class="product-info">
+              <h3>Печенье "Ореховое"</h3>
+              <div class="product-meta">
+                <span class="price">30 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(22)</span>
+                </div>
+              </div>
+              <p>'Хрустящее печенье с грецкими орехами'</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Пирожное 4 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="images/product-cookie2.jpg" alt="Пирожное Картошка">
+            </div>
+            <div class="product-info">
+              <h3>Пирожное Картошка</h3>
+              <div class="product-meta">
+                <span class="price">28 руб.</span>
+                <div class="rating">
+                  ★★★★☆ <span class="count">(29)</span>
+                </div>
+              </div>
+              <p>'Классический десерт на основе крошки из печенья и сгущенного молока, оформленный в виде мини-картофелины с посыпкой какао или шоколада.'</p>
+              <div class="product-actions">
+                <button class="btn-wishlist">
+                  <i class="far fa-heart"></i>
+                </button>
+                <button class="btn-cart">Заказать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Информационный блок -->
+      <div class="catalog-info">
+        <h3><i class="fas fa-info-circle"></i> Как сделать заказ?</h3>
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Выберите дату</h4>
+            <p>Заказы принимаются за 3 дня до нужной даты</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone-alt"></i>
+            <h4>Позвоните нам</h4>
+            <p>+375 (29) 123-45-67 для консультации</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-truck"></i>
+            <h4>Доставка</h4>
+            <p>Бесплатно при заказе от 100 руб.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.jpg" alt="SweetCake Логотип" class="footer-logo-img">
+        <h2 class="footer-logo-text">Sweet<span>Cake</span></h2>
+      </div>
+
+      <div class="footer-links">
+        <div class="links-group">
+          <h3 class="links-title">Меню</h3>
+          <ul class="links-list">
+            <li><a href="index.html" class="footer-link">Главная</a></li>
+            <li><a href="catalog.html" class="footer-link">Каталог</a></li>
+            <li><a href="order.html" class="footer-link">Заказать</a></li>
+            <li><a href="reviews.html" class="footer-link">Отзывы</a></li>
+            <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="links-group">
+          <h3 class="links-title">Контакты</h3>
+          <ul class="links-list">
+            <li><a href="tel:+375291234567" class="footer-link">+375 (29) 836-02-44</a></li>
+            <li><a href="mailto:info@sweetcake.by" class="footer-link">info@sweetcake.by</a></li>
+            <li><a href="https://maps.google.com/?q=Минск, ул. Кондитерская, 15" target="_blank" class="footer-link">г. Минск, ул. Кондитерская, 15</a></li>
+          </ul>
+        </div>
+      </div> <!-- Закрывающий тег для footer-links -->
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 SweetCake. Все права защищены.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="VK"><i class="fab fa-vk"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

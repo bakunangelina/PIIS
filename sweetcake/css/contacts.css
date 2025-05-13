@@ -1,0 +1,113 @@
+/* Стили для секции контактов */
+.contacts-section {
+    padding: 80px 0;
+}
+
+/* Сетка контактов */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Блок с информацией */
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Элемент контакта */
+.contact-item {
+    display: flex;
+    gap: 16px;
+}
+
+/* Иконка контакта */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Содержимое контакта */
+.contact-content {
+    flex-grow: 1;
+}
+
+.contact-title {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--text-color);
+}
+
+.contact-link {
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.contact-text {
+    color: var(--light-text);
+}
+
+/* Социальные сети */
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Карта */
+.contacts-map {
+    height: 500px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.contacts-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 992px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-map {
+        height: 400px;
+    }
+}

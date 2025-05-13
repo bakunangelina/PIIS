@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCake - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-theme">
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="SweetCake Логотип" class="logo-img">
+                    <h1 class="logo-text">Sweet<span>Cake</span></h1>
+                </a>
+            </div>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+                    <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li class="nav-item"><a href="order.html" class="nav-link">Заказать</a></li>
+                    <li class="nav-item"><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Переключить тему" title="Сменить тему">
+                    <i class="fas fa-moon theme-icon"></i>
+                </button>
+                <button class="burger-menu" aria-label="Меню" aria-expanded="false">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Создайте свой идеальный десерт</h2>
+                <p class="hero-subtitle">Индивидуальные кондитерские изделия ручной работы по вашему уникальному дизайну</p>
+                <div class="hero-buttons">
+                    <a href="order.html" class="btn btn-primary btn-hero">Оформить заказ</a>
+                    <a href="catalog.html" class="btn btn-outline btn-hero">Посмотреть каталог</a>
+                </div>
+            </div>
+
+            <div class="hero-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="images/hero-cake1.jpg" alt="Эксклюзивный торт" class="carousel-image">
+                        <div class="carousel-caption">
+                            <h3>Авторские торты</h3>
+                            <p>Уникальные дизайны для ваших праздников</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/hero-cake2.jpg" alt="Капкейки" class="carousel-image">
+                        <div class="carousel-caption">
+                            <h3>Капкейки на заказ</h3>
+                            <p>Нежные и вкусные мини-тортики</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/hero-cake3.jpg" alt="Пирожные" class="carousel-image">
+                        <div class="carousel-caption">
+                            <h3>Изысканные пирожные</h3>
+                            <p>Для истинных ценителей сладкого</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-prev" aria-label="Предыдущий слайд">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0" aria-label="Перейти к слайду 1"></button>
+                        <button class="indicator" data-slide="1" aria-label="Перейти к слайду 2"></button>
+                        <button class="indicator" data-slide="2" aria-label="Перейти к слайду 3"></button>
+                    </div>
+                    <button class="carousel-next" aria-label="Следующий слайд">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Популярные товары</h2>
+                <p class="section-subtitle">Самые востребованные кондитерские изделия</p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="images/product-cake1.jpg" alt="Торт 'Ягодное наслаждение'" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Торт "Ягодное наслаждение"</h3>
+                        <div class="product-meta">
+                            <span class="product-price">85 руб.</span>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="product-description">Нежный бисквит с клубничным кремом и свежими ягодами</p>
+                        <div class="product-actions">
+                            <a href="catalog.html" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpg" alt="SweetCake Логотип" class="footer-logo-img">
+                <h2 class="footer-logo-text">Sweet<span>Cake</span></h2>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-group">
+                    <h3 class="links-title">Меню</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html" class="footer-link">Главная</a></li>
+                        <li><a href="catalog.html" class="footer-link">Каталог</a></li>
+                        <li><a href="order.html" class="footer-link">Заказать</a></li>
+                        <li><a href="reviews.html" class="footer-link">Отзывы</a></li>
+                        <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-group">
+                    <h3 class="links-title">Контакты</h3>
+                    <ul class="links-list">
+                        <li><a href="tel:+375291234567" class="footer-link">+375 (29) 836-02-44</a></li>
+                        <li><a href="mailto:info@sweetcake.by" class="footer-link">info@sweetcake.by</a></li>
+                        <li><a href="https://maps.google.com/?q=Минск, ул. Кондитерская, 15" target="_blank" class="footer-link">г. Минск, ул. Кондитерская, 15</a></li>
+                    </ul>
+                </div>
+            </div> <!-- Закрывающий тег для footer-links -->
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 SweetCake. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

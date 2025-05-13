@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCake - Отзывы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-theme">
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="SweetCake Логотип" class="logo-img">
+                    <h1 class="logo-text">Sweet<span>Cake</span></h1>
+                </a>
+            </div>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+                    <li class="nav-item"><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li class="nav-item"><a href="order.html" class="nav-link">Заказать</a></li>
+                    <li class="nav-item"><a href="reviews.html" class="nav-link">Отзывы</a></li>
+                    <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Переключить тему" title="Сменить тему">
+                    <i class="fas fa-moon theme-icon"></i>
+                </button>
+                <button class="burger-menu" aria-label="Меню" aria-expanded="false">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main-content">
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+            <div class="reviews-list">
+                <!-- Отзыв 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="user-avatar">
+                            <img src="images/user1.jpg" alt="Анна К.">
+                        </div>
+                        <div class="user-info">
+                            <span class="review-author">Анна К.</span>
+                            <span class="review-date">15.05.2023</span>
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Заказывала торт на юбилей, все было просто идеально!</p>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="user-avatar">
+                            <img src="images/user2.jpg" alt="Михаил С.">
+                        </div>
+                        <div class="user-info">
+                            <span class="review-author">Михаил С.</span>
+                            <span class="review-date">10.05.2023</span>
+                        </div>
+                        <div class="review-rating">★★★★☆</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Очень вкусные капкейки, рекомендую!</p>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="user-avatar">
+                            <img src="images/user3.jpg" alt="Иван П.">
+                        </div>
+                        <span class="review-author">Иван П.</span>
+                        <span class="review-date">29.04.2025</span>
+                        <div class="review-rating">★★★★☆</div>
+                    </div>
+                    <div class="review-content">
+                        <p>Капкейки были просто восхитительны! Заказал для офиса, коллеги оценили. Особенно понравилась шоколадная начинка - не приторная, с легкой горчинкой. Упаковка была надежная, ничего не помялось при доставке. Единственное - хотелось бы больше вариантов оформления для мужского коллектива.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Форма добавления отзыва -->
+            <div class="add-review-form">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="reviewName">Ваше имя:</label>
+                        <input type="text" id="reviewName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Оценка:</label>
+                        <div class="rating-stars">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">Ваш отзыв:</label>
+                        <textarea id="reviewText" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Отправить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpg" alt="SweetCake Логотип" class="footer-logo-img">
+                <h2 class="footer-logo-text">Sweet<span>Cake</span></h2>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-group">
+                    <h3 class="links-title">Меню</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html" class="footer-link">Главная</a></li>
+                        <li><a href="catalog.html" class="footer-link">Каталог</a></li>
+                        <li><a href="order.html" class="footer-link">Заказать</a></li>
+                        <li><a href="reviews.html" class="footer-link">Отзывы</a></li>
+                        <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-group">
+                    <h3 class="links-title">Контакты</h3>
+                    <ul class="links-list">
+                        <li><a href="tel:+375291234567" class="footer-link">+375 (29) 836-02-44</a></li>
+                        <li><a href="mailto:info@sweetcake.by" class="footer-link">info@sweetcake.by</a></li>
+                        <li><a href="https://maps.google.com/?q=Минск, ул. Кондитерская, 15" target="_blank" class="footer-link">г. Минск, ул. Кондитерская, 15</a></li>
+                    </ul>
+                </div>
+            </div> <!-- Закрывающий тег для footer-links -->
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 SweetCake. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/reviews.js"></script>
+</body>
+</html>
